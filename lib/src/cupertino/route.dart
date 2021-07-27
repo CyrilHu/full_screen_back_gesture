@@ -10,9 +10,9 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 
-import 'colors.dart';
-import 'interface_level.dart';
-import 'localizations.dart';
+import 'package:flutter/cupertino.dart' show CupertinoDynamicColor;
+import 'package:flutter/cupertino.dart' show CupertinoUserInterfaceLevel, CupertinoUserInterfaceLevelData;
+import 'package:flutter/cupertino.dart' show CupertinoLocalizations;
 
 const double _kBackGestureWidth = 20.0;
 const double _kMinFlingVelocity = 1.0; // Screen widths per second.
