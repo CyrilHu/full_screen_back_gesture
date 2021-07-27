@@ -696,7 +696,11 @@ class _CupertinoBackGestureDetectorState<T> extends State<_CupertinoBackGestureD
     return Stack(
       fit: StackFit.passthrough,
       children: <Widget>[
-        widget.child,
+        Listener(
+          onPointerDown: _handlePointerDown,
+          behavior: HitTestBehavior.translucent,
+          child: widget.child
+        ),
         PositionedDirectional(
           start: 0.0,
           width: dragAreaWidth,
