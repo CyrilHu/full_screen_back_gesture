@@ -1,7 +1,7 @@
 name: full_screen_back_gesture
-description: A new Flutter package project.
+description: A Flutter package supports full screen swipe back gesture.
 version: 0.0.1
-homepage:
+homepage: https://github.com/cyrilhu/full_screen_back_gesture
 
 environment:
   sdk: ">=2.12.0 <3.0.0"

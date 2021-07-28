@@ -1,14 +1,39 @@
 # full_screen_back_gesture
 
-A new Flutter package project.
+A Flutter package supports full screen swipe back gesture.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+- full screen swipe back gesture instead of edge swipe
+- will not block horizontal scroll gesture of Scrollable widgets
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+## Usage
+
+### Option 1 (Recommended)
+
+When you use `MaterialPageRoute` for `Navigator`, you can custom page transitions,
+
+Sets `pageTransitionsTheme` for `MaterialApp` theme.
+
+```dart
+MaterialApp(
+  theme: ThemeData(
+    pageTransitionsTheme: PageTransitionsTheme(
+      builders: {
+        TargetPlatform.android: FullScreenBackGesturePageTransitionsBuilder(),
+        TargetPlatform.iOS: FullScreenBackGesturePageTransitionsBuilder(),
+      },
+    ),
+  ),
+);
+```
+
+### Option 2
+
+If you have to use `CupertinoPageRoute` for `Navigator`, import cupertino route form this package, There is only `CupertinoPageRoute` has been replaced.
+
+```dart
+import 'package:full_screen_back_gesture/cupertino.dart';
+
+Navigator.of(context).push(CupertinoPageRoute(builder: (context) => MainPage())),
+```
