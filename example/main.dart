@@ -11,7 +11,8 @@ class App extends StatelessWidget {
       theme: ThemeData(
         pageTransitionsTheme: PageTransitionsTheme(
           builders: {
-            TargetPlatform.android: FullScreenBackGesturePageTransitionsBuilder(),
+            TargetPlatform.android:
+                FullScreenBackGesturePageTransitionsBuilder(),
             TargetPlatform.iOS: FullScreenBackGesturePageTransitionsBuilder(),
           },
         ),

@@ -16,7 +16,8 @@ import 'src/cupertino/route.dart';
 ///    transition that matches native iOS page transitions.
 ///  * [ZoomPageTransitionsBuilder], which defines a page transition similar
 ///    to the one provided in Android 10.
-class FullScreenBackGesturePageTransitionsBuilder extends PageTransitionsBuilder {
+class FullScreenBackGesturePageTransitionsBuilder
+    extends PageTransitionsBuilder {
   /// Construct a [FullScreenBackGesturePageTransitionsBuilder].
   const FullScreenBackGesturePageTransitionsBuilder();
 
@@ -28,6 +29,7 @@ class FullScreenBackGesturePageTransitionsBuilder extends PageTransitionsBuilder
     Animation<double> secondaryAnimation,
     Widget child,
   ) {
-    return CupertinoRouteTransitionMixin.buildPageTransitions<T>(route, context, animation, secondaryAnimation, child);
+    return CupertinoRouteTransitionMixin.buildPageTransitions<T>(
+        route, context, animation, secondaryAnimation, child);
   }
 }

@@ -1,6 +1,6 @@
 # full_screen_back_gesture
 
-A Flutter package supports full screen swipe back gesture.
+A Flutter package supports full screen swipe back gesture, without scrolling conflicts.
 
 ## Features
 
