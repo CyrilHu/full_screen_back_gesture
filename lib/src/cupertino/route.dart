@@ -3,6 +3,7 @@
 // found in the LICENSE file.
 
 import 'dart:math';
+import 'dart:io';
 import 'dart:ui' show lerpDouble, ImageFilter;
 
 import 'package:flutter/foundation.dart';
@@ -692,7 +693,7 @@ class _CupertinoBackGestureDetectorState<T> extends State<_CupertinoBackGestureD
     double dragAreaWidth = Directionality.of(context) == TextDirection.ltr ?
                            MediaQuery.of(context).padding.left :
                            MediaQuery.of(context).padding.right;
-    dragAreaWidth = max(dragAreaWidth, _kBackGestureWidth);
+    dragAreaWidth = max(dragAreaWidth, Platform.isAndroid ? 0 : _kBackGestureWidth);
     return Stack(
       fit: StackFit.passthrough,
       children: <Widget>[
